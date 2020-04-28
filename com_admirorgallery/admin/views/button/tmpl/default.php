@@ -32,7 +32,7 @@ $ag_init_itemURL = $ag_rootFolder;
         <?php echo JText::_("AG_SELECT_FOLDER"); ?>&nbsp;
         <select name="AG_form_folderName">
             <?php
-            $ag_folders = JFolder::listFolderTree(JPATH_SITE . $ag_init_itemURL, "");
+            $ag_folders = JFolder::listFolderTree(JPATH_SITE . $ag_init_itemURL, "",10);
             $ag_init_itemURL_strlen = strlen($ag_init_itemURL);
             if (!empty($ag_folders)) {
                 foreach ($ag_folders as $ag_folders_key => $ag_folders_value) {
